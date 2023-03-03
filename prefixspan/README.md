@@ -1,4 +1,4 @@
-Apriori Algorithm
+PrefixSpan Algorithm
 ==========================================
 
 Environment
