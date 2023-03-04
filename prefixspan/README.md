@@ -10,6 +10,14 @@ Environment
 Usage
 -----
 
-To run the program with *minSupport* = 0.15 and *minConfidence* = 0.6
+To run the program with *minSupport* = 0.15 and *maxPatternLength* = 5
 
-    python3 apriori.py -f input.txt -s 0.15 -c 0.6
+    python3 prefixspan.py -f seqdata.dat -s 0.5 -l 5
+
+Test
+-----
+
+To run the unittest
+
+    cd prefixspan
+    python3 -m unittest test_prefixspan.py
