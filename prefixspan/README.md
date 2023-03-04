@@ -10,9 +10,9 @@ Environment
 Usage
 -----
 
-To run the program with *minSupport* = 0.15 and *maxPatternLength* = 5
+To run the program with *minSupport* = 0.3 and *maxPatternLength* = 5
 
-    python3 prefixspan.py -f seqdata.dat -s 0.5 -l 5
+    python3 prefixspan.py -f seqdata.dat -s 0.3 -l 5
 
 Test
 -----
