@@ -176,19 +176,16 @@ class PrefixSpan:
 def data_from_file(fname):
     """Function which reads from the file and return a list"""
     data = []
-    transaction_time = 0
     with open(fname, "r") as file_iter:
         for i, line in enumerate(file_iter):
-            ptr = -1
-            data.append([[]])
+            ptr = transaction_time = -1
             for j, d in enumerate(map(int, line.split())):
                 if j == 0:
-                    continue
-                if j % 2:
-                    if transaction_time != d:
-                        transaction_time = d
-                        ptr += 1
-                else:
+                    data.append([[]])
+                elif j % 2 and transaction_time != d:
+                    transaction_time = d
+                    ptr += 1
+                elif j % 2 == 0:
                     if len(data[i])-1 < ptr:
                         data[i].append([])
                     data[i][ptr].append(d)
