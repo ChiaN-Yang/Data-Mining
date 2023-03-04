@@ -164,8 +164,8 @@ def main():
     items, rules = runApriori(inFile, args.minS, args.minC)
     printResults(items, rules)
     _, rule = toStrResults(items, rules)
-    with open(f'result_{args.input}','w') as tfile:
-	    tfile.write('\n'.join(rule))
+    with open(f'result_{args.input}', 'w') as tfile:
+        tfile.write('\n'.join(rule))
 
 
 if __name__ == "__main__":
