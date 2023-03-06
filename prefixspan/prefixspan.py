@@ -192,7 +192,7 @@ def data_from_file(fname):
         return data
 
 
-def getParser():
+def get_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "-f",
@@ -222,7 +222,7 @@ def getParser():
 
 
 def main():
-    args = getParser()
+    args = get_parser()
     sequences = data_from_file(args.input)
     model = PrefixSpan.train(sequences, minSupport=args.minS, maxPatternLength=args.maxL)
     result = model.freqSequences().collect()

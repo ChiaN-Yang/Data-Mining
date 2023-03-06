@@ -1,14 +1,9 @@
-# from collections import defaultdict
-# from io import BytesIO as StringIO
-# from itertools import chain
-# from mock import patch
 import os
 import unittest
-
 from prefixspan import PrefixSpan, data_from_file
 
 
-class AprioriTest(unittest.TestCase):
+class PrefixSpanTest(unittest.TestCase):
 
     def test_subsets_should_return_empty_subsets_if_input_empty_set(self):
         sequences = []
